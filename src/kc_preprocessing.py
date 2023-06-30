@@ -6,6 +6,7 @@ from kc_transformer_pipelines import (
     SqftPriceTransformer,
     DistanceToWealthTransformer,
     DistanceToBeachTransformer,
+    columnDropperTransformer,
 )
 
 from sklearn.pipeline import Pipeline
@@ -30,10 +31,22 @@ class PreprocessingKC:
             ]
         )
 
+        self.drop_leakage_columns = Pipeline(
+            [
+                (
+                    "columnDropper",
+                    columnDropperTransformer(
+                        ["sqft_price", "date", "delta_lat", "delta_long"]
+                    ),
+                )
+            ]
+        )
+
         self.preprocessor_pipe = Pipeline(
             [
                 ("data_cleaning", self.data_cleaning_pipeline),
                 ("preprocessor", self.preprocessor_pipe),
+                ("drop_columns", self.drop_leakage_columns),
             ]
         )
 

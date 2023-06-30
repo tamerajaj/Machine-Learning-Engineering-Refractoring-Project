@@ -185,3 +185,17 @@ class DistanceToBeachTransformer(KingCountyTransformer):
         df["water_distance"] = water_distance
 
         return df
+
+
+# TODO: Note that the following class is how we would implement a transformer. The usage of inheritance is not
+#  necessary. And maybe it is better to keep transformation classes separated with sharing the fit method.
+class columnDropperTransformer:
+    def __init__(self, columns):
+        self.columns = columns
+
+    def transform(self, X, y=None):
+        X = X.copy()
+        return X.drop(self.columns, axis=1)
+
+    def fit(self, X, y=None):
+        return self
