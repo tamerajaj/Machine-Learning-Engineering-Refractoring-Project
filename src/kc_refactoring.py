@@ -1,17 +1,4 @@
-# Basic imports
-import pandas as pd
 import numpy as np
-
-
-# Machine Learning libraries
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
-from sklearn.metrics import r2_score
-from sklearn.preprocessing import PolynomialFeatures
-from sklearn.linear_model import ElasticNet
-from sklearn.model_selection import GridSearchCV
-from sklearn.preprocessing import StandardScaler
-from sklearn.base import BaseEstimator, TransformerMixin
 
 
 # Data Preparation
@@ -41,6 +28,7 @@ def fill_missings_view_wf(df):
     return df
 
 
+# Feature Engineering
 def calculate_last_change(df):
     df = df.copy()
     last_known_change = []
@@ -55,7 +43,6 @@ def calculate_last_change(df):
     return df
 
 
-# Feature Engineering
 def calculate_sqft_price(df):
     df = df.copy()
     df["sqft_price"] = (df.price / (df.sqft_living + df.sqft_lot)).round(2)
