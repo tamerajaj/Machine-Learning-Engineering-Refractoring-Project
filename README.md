@@ -44,3 +44,4 @@ pip install -r requirements.txt
     * Write tests for the functions in [kc_preprocessing.py](./src/kc_preprocessing.py) and [kc_transformer_pipelines.py](./src/kc_transformer_pipelines.py).
     * Write [kc_preprocessing.py](./src/kc_preprocessing.py) without inheritance.
     * Apply transformation using ColumnsTransformer instead of Pipeline to reduce load of data in memory.
+    * Finish refactoring the modeling part of the notebook. 
