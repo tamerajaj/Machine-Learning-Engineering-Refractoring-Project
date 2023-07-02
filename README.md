@@ -16,3 +16,15 @@ python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
+
+## Questions
+
+### Section 2: FastAPI and Docker (in [fastapi_docker](./fastapi_docker) folder)
+* What are the steps you took to complete the project?
+    * Build a FastAPI app, that allows to Create, Read, Update, and Delete houses to/from a database.
+    * Create a Dockerfile and a Docker compose for the app.
+    * Wrote tests for the CRUD system, they run inside the docker container.
+* What are the challenges you faced?
+  * Alligning the names of the containers and database.
+* What are the things you would do differently if you had more time?
+  * Creating a call for a prediction model.
