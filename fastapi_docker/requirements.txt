@@ -1,0 +1,14 @@
+psycopg2-binary
+uvicorn
+fastapi
+sqlalchemy
+python-dotenv
+requests
+pandas<2.0.0
+statsmodels
+scipy
+skops
+scikit-learn
+pydantic
+pytest
+httpx
