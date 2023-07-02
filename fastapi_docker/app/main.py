@@ -1,7 +1,7 @@
 from fastapi import Depends, FastAPI, HTTPException
-import models
-import schemas
-from database import engine, SessionLocal
+from . import models
+from . import schemas
+from .database import engine, SessionLocal
 from sqlalchemy.orm import Session
 
 app = FastAPI()
@@ -62,3 +62,12 @@ def delete(id: int, db: Session = Depends(get_db)):
     house.delete(synchronize_session=False)
     db.commit()
     return "Deleted successfully"
+
+
+# TODO: add prediction route for the ML model
+# @app.post("/predict", response_model=schemas.Prediction)
+# def predict(request: schemas.PredictionRequest, db: Session = Depends(get_db)):
+#     # get data from request
+#     # preprocess data
+#     # make prediction
+#     # return prediction

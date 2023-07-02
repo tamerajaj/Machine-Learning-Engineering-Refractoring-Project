@@ -10,3 +10,5 @@ scipy
 skops
 scikit-learn
 pydantic
+pytest
+httpx

@@ -1,5 +1,5 @@
 from sqlalchemy import Boolean, Column, ForeignKey, Integer, Float, String
-from database import Base
+from .database import Base
 
 
 class House(Base):
