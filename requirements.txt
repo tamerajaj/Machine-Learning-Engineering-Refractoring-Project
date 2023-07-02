@@ -7,3 +7,5 @@ statsmodels
 scikit-learn
 scipy
 skops
+pytest
+httpx
