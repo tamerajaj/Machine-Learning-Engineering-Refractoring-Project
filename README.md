@@ -18,7 +18,7 @@ pip install -r requirements.txt
 ```
 
 ## Questions
-### Section 1: From Jupyter notebooks to Python programs
+### Section 1: From Jupyter notebooks to Python programs (in [src](./src) folder)
 
 * What are the steps you took to complete the project?
     * I created pre-commit hools locally using mypy and black.
