@@ -47,7 +47,7 @@ docker-compose run --rm app sh -c "python -m pytest -v -s"
 ```
 
 ## Questions
-### Section 1: Reactoring [From Jupyter notebooks to Python programs] (in [src](./src) folder)
+### Section 1: Refactoring [From Jupyter notebooks to Python programs] (in [src](./src) folder)
 
 * What are the steps you took to complete the project?
     * I created pre-commit hooks locally using mypy and black.
@@ -82,6 +82,7 @@ docker-compose run --rm app sh -c "python -m pytest -v -s"
   * Aligning the names of the containers and database.
 
   
-* What are the things you would do differently if you had more time?
+* What are the things you would do differently if you had more time? 
+  * Automatically upload csv file to database and run the pipeline.
   * Creating a call for a prediction model.
 
