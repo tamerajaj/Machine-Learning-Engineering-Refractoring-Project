@@ -7,3 +7,7 @@ if __name__ == "__main__":
     processor = PreprocessingKC()
 
     new_data, pipeline = processor.preprocess_fit_transform(data)
+
+    new_data.to_csv(
+        "../data/King_County_House_prices_dataset_preprocessed.csv", index=False
+    )
